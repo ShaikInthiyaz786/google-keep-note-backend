@@ -7,7 +7,7 @@ const cors = require("cors");
 const cookiParser = require("cookie-parser")
 const noteRoutes = require("./routes/noteRoutes");
 
-const PORT = 8009;
+const PORT = process.env.PORT || 8009;
 
 // app.get("/",(req,res)=>{
 //     res.status(201).json("server created")
