@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+require("dotenv").config()
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");

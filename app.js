@@ -6,6 +6,7 @@ const noteRoute = require("./routes/noteRoutes")
 const cors = require("cors");
 const cookiParser = require("cookie-parser")
 const noteRoutes = require("./routes/noteRoutes");
+require("dotenv").config()
 
 const PORT = process.env.PORT || 8009;
 
