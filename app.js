@@ -7,6 +7,7 @@ const cors = require("cors");
 const cookiParser = require("cookie-parser")
 const noteRoutes = require("./routes/noteRoutes");
 require("dotenv").config()
+const path = require("path");
 
 const PORT = process.env.PORT || 8009;
 
@@ -21,6 +22,11 @@ app.use(router);
 app.use(noteRoute);
 app.use(noteRoutes);
 
+
+app.get("/", (req, res) => {
+    app.use(express.static(path.resolve(__dirname,"client", "build")));
+    res.sendFile(path.resolve(__dirname, "client", "bulld", "index.html"));
+    });
 
 app.listen(PORT,()=>{
     console.log(`server start at port no : ${PORT}`);
